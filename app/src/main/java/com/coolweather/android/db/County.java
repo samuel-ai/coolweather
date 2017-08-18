@@ -6,13 +6,15 @@ import org.litepal.crud.DataSupport;
  * Created by Samuel on 2017/8/18.
  */
 
-public class Country extends DataSupport {
+public class County extends DataSupport {
 
     private int id;
 
     private String countryName;
 
     private String weatherId;
+
+    private int CityId;
 
     public int getId() {
         return id;
@@ -36,6 +38,14 @@ public class Country extends DataSupport {
 
     public void setWeatherId(String weatherId) {
         this.weatherId = weatherId;
+    }
+
+    public int getCityId() {
+        return CityId;
+    }
+
+    public void setCityId(int cityId) {
+        CityId = cityId;
     }
 
 }
