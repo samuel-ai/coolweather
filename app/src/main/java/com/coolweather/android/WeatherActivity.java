@@ -42,10 +42,7 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        initUI();
-    }
-
-    private void initUI() {
+        //初始化控件
         weatherLayout = (ScrollView) findViewById(R.id.weather_layout);
         titleCity = (TextView) findViewById(R.id.title_city);
         degreeText = (TextView) findViewById(R.id.degree_text);
@@ -69,6 +66,8 @@ public class WeatherActivity extends AppCompatActivity {
             requestWeather(weatherId);
         }
     }
+
+
 
     /**
      * 根据天气id请求天气数据
