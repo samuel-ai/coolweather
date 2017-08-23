@@ -45,6 +45,7 @@ public class WeatherActivity extends AppCompatActivity {
         //初始化控件
         weatherLayout = (ScrollView) findViewById(R.id.weather_layout);
         titleCity = (TextView) findViewById(R.id.title_city);
+        titleUpdateTime = (TextView) findViewById(R.id.title_update_time);
         degreeText = (TextView) findViewById(R.id.degree_text);
         weatherInfoText = (TextView) findViewById(R.id.weather_info_text);
         forecastlayout = (LinearLayout) findViewById(R.id.forecast_layout);
@@ -129,7 +130,7 @@ public class WeatherActivity extends AppCompatActivity {
             dateText.setText(forecast.date);
             infoText.setText(forecast.more.info);
             maxText.setText(forecast.temperature.max);
-            maxText.setText(forecast.temperature.min);
+            minText.setText(forecast.temperature.min);
             forecastlayout.addView(view);
         }
         if (weather.aqi != null) {
